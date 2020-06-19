@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>zaiko_app</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+
+      <header>
+        <div class="container">
+          <div class="header-left">
+            <a class="link" href="/">在庫君TOP</a>
+          </div>
+          <span class="fa fa-bars menu-icon"></span>
+          <div class="header-right">
+              <a class="link" href="/home/howto">使用方法</a>
+              <a class="link" href="/stock/new">新規項目</a>
+              <a class="link" href="/stock/index">在庫一覧</a>
+          </div>
+        </div>
+      </header>
+
+    <%= yield %>
+
+    <footer>
+      <div class="container">
+        <div class="footer-logo">
+          <p>Coffee</p>
+          <div class="btn-wrapper">
+            <a class="btn instagram" href="#"><span class="fab fa-instagram"></span> instagram</a>
+            <a class="btn facebook"href="#"><span class="fab fa-facebook"></span>Facebook</a>
+            <a class="btn twitter"href="https://twitter.com/Syuuu03809642"><span class="fab fa-twitter"></span> Twitter</a>
+          </div>
+        </div>
+
+        <div class="footer-list">
+          <a class="link" href="profile">profile</a>
+          <a class="link" href="contact">contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

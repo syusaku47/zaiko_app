@@ -1,0 +1,31 @@
+
+
+
+<body>
+    <div class="singleinbox">
+        <div class="new-top-wrapper">
+          <div class="container">
+            <h1>新規作成</h1>
+
+          </div><!--container-->
+        </div><!--top-wrapper-->
+
+        <div class="main new">
+          <div class="container">
+            <ul class= "new menu">
+              <li>新しく購入したもの</li>
+              <li>個数</li>
+            </ul>
+            <%= form_tag("/stock/create")do %>
+            <form>
+            <ul class= "new item">  
+              <li><input type="text" name="item"></li>
+              <li><input type="number" name="number"></li>
+            </ul>
+            <input class= "btn submit" type= "submit" value= "送信"> 
+            </form>
+            <%end%>
+          </div><!--container-->
+        </div> <!--main -->
+    </div><!--singleinbox -->
+  </body>

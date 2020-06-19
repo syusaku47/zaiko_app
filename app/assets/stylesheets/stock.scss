@@ -1,0 +1,58 @@
+// Place all the styles related to the stock controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+a{
+  display:inline-block;
+  color:red;
+}
+
+.index-menu {
+  font-size:18px;
+  text-align: right;
+  padding-right: 150px;
+}
+
+.menu{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu li{
+  width: 25%;
+}
+
+.item li{
+  width: 25%;
+}
+
+input,textarea{
+  width: 200px;
+  font-size:15px;
+  margin:20px 50px 20px 0;
+  padding:20px 10px;
+  border:1px solid #e6e6e6;
+  background-color: #fff;
+}
+
+.submit {
+  background-color: #239b76;
+}
+
+
+.stocks-index-item {
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+  width:900px;
+  margin: 0 auto;
+}
+
+
