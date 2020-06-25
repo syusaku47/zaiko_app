@@ -1,63 +1,91 @@
 class StockController < ApplicationController
+  before_action :set_current_user
+  before_action :current_user_stock
   def index
-    @stocks = Stock.all
   end
 
   def new
+    @stock = Stock.new
   end
 
   def create
     @stock = Stock.new(
       content: params[:item],
-      stock_number: params[:number]
+      stock_number: params[:number],
+      user_id: @current_user.id
       )
-      @stock.save
-      redirect_to("/stock/index")
+
+      if @stock.save
+        flash[:notice]="新規項目作成しました"
+        redirect_to("/stock/index")
+      else
+        render("/stock/new")
+      end
   end
 
   def edit
-    @stocks = Stock.all
-  end
-
-  def update
-    @stocks = Stock.all
-    i=0
-      @stocks.each do |stock|
-        stock.content = params[:name][i]
-        stock.stock_number = params[:number][i]
-        stock.save
-        i+=1
-      end
-      redirect_to("/stock/index")
+    
   end
 
   def add
-    @stocks = Stock.all
+    
   end
 
     def update
+      flag=nil
+      error=nil
+      
       flag = params[:f]
-      @stocks = Stock.all
+      
       i=0
+      if flag
+        #flagがある場合 add
         @stocks.each do |stock|
-          if flag
+          if stock.user_id==@current_user.id
             stock.stock_number += params[:number][i].to_i
-          else 
-            stock.content = params[:name][i]
-            stock.stock_number = params[:number][i]
           end
-          stock.save
-          i+=1
+          if stock.save
+            i+=1
+          else
+            error=stock
+          end
         end
-        flag=nil
+        
+      else
+        #flagがない場合 edit
+        @stocks.each do |stock|
+          if stock.user_id==@current_user.id
+            stock.content = params[:name][i]
+            stock.stock_number = params[:number][i].to_i
+          end
+          if stock.save
+            i+=1
+          else
+            error=stock
+            i+=1
+          end
+        end
+      end
+      
+      
+      if  error && flag 
+        render("/stock/add")
+
+      elsif error && !(flag) 
+        flash[:notice]="??"
+        render("/stock/edit")
+
+      else
+        flash[:notice]="変更しました"
         redirect_to("/stock/index")
+      end
     end
 
   def destroy
     @stock = Stock.find_by(id: params[:id])
+    flash[:notice]="#{@stock.content}削除しました"
     @stock.destroy
     redirect_to("/stock/index")
   end
-
 
 end

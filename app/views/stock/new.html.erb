@@ -3,29 +3,29 @@
 
 <body>
     <div class="singleinbox">
-        <div class="new-top-wrapper">
+      <h1 class= "new-heading">新規作成</h1>
+        <div class="stock-new">
           <div class="container">
-            <h1>新規作成</h1>
-
-          </div><!--container-->
-        </div><!--top-wrapper-->
-
-        <div class="main new">
-          <div class="container">
-            <ul class= "new menu">
+            <ul class= "stock-new list">
               <li>新しく購入したもの</li>
               <li>個数</li>
             </ul>
+            <div class= "form-body">
             <%= form_tag("/stock/create")do %>
-            <form>
-            <ul class= "new item">  
-              <li><input type="text" name="item"></li>
-              <li><input type="number" name="number"></li>
-            </ul>
-            <input class= "btn submit" type= "submit" value= "送信"> 
-            </form>
+              <div class="form-error list">
+                <% @stock.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </div>
+
+              <ul class= "stock-new list">  
+                <li><input type="text" name="item" value="<%= @stock.content%>"></li>
+                <li><input type="number" name="number" value="<%= @stock.stock_number%>"></li>
+              </ul>
+              <input class= "btn submit" type= "submit" value= "送信"> 
             <%end%>
+          </div><!--form-body-->
           </div><!--container-->
-        </div> <!--main -->
+        </div> <!--stock-new -->
     </div><!--singleinbox -->
   </body>

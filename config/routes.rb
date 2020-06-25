@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get "login" => "users#login_form"
+  post "login" => "users#login"
+  post "logout" => "users#logout"
+  get "users/index" => "users#index"
+  get "users/new" => "users#new"
+  post "users/create" => "users#create"
 
   post "stock/:f/update"  => "stock#update"
   post "stock/:id/destroy" => "stock#destroy"
@@ -9,7 +15,6 @@ Rails.application.routes.draw do
   get "stock/add"     => "stock#add"
   get "stock/index" => "stock#index"
   
-
   root 'home#top'
   get "home/howto" => "home#howto"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

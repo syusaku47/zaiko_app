@@ -1,0 +1,24 @@
+<html>
+<body>
+<div class="singleinbox">
+    <div class="user-index">
+        <div class="container">
+            <h1 class= "index-heading">アカウント</h1>
+
+            <div class="users-index-item">
+                <p>ユーザー名</p>
+                <p><%= @user.name %></p>
+                <p>メールアドレス</p>
+                <p><%= @user.email%></p>
+                <p><%=link_to("アカウント削除","/user/destroy",{method: "post"})%></p>
+            </div>
+            <div class="users-index-link">
+                <ul class= "user-index list">
+                <li><%=link_to("戻る","/stock/index")%><li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div><!--singleinbox -->
+</body>
+</html>

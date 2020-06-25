@@ -17,23 +17,41 @@
       <header>
         <div class="container">
           <div class="header-left">
-            <a class="link" href="/">在庫君TOP</a>
+          
+          <% if session[:user_id] %>
+            <a class="link" href="/stock/index">在庫君TOP</a>
+          <% else %>
+            <a class="link" href="/">TOP</a>
+          <% end %>
+          
           </div>
           <span class="fa fa-bars menu-icon"></span>
           <div class="header-right">
-              <a class="link" href="/home/howto">使用方法</a>
-              <a class="link" href="/stock/new">新規項目</a>
-              <a class="link" href="/stock/index">在庫一覧</a>
+          <%if @current_user%>
+            <a class="link" href="/users/index"><%@current_user.name%></a>
+            <%= link_to("ログアウト","/logout",{method: :post})%>
+            <a class="link" href="/home/howto">使用方法</a>
+            <a class="link" href="/stock/index">在庫一覧</a>
+            <a class="link" href="/stock/new">新規作成</a>
+          <%else%>
+            <a class="link" href="/users/new">アカウント作成</a>
+          <%end%>
           </div>
         </div>
       </header>
-
+      
+      <% if flash[:notice] %>
+        <div class= "flash">
+          <p><%=flash[:notice]%></p>
+        </div>
+      <% end %>
+      
     <%= yield %>
 
     <footer>
       <div class="container">
         <div class="footer-logo">
-          <p>Coffee</p>
+          <p>ZAIKO</p>
           <div class="btn-wrapper">
             <a class="btn instagram" href="#"><span class="fab fa-instagram"></span> instagram</a>
             <a class="btn facebook"href="#"><span class="fab fa-facebook"></span>Facebook</a>

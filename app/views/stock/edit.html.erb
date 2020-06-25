@@ -3,31 +3,30 @@
 
 <body>
     <div class="singleinbox">
-        <div class="new-top-wrapper">
+        <div class="stock-edit">
           <div class="container">
-            <h1>編集</h1>
-
-        </div><!--top-wrapper-->
-
-        <div class="main edit">
-          <div class="container">
-            <ul class= "edit menu">
+            <h1 class= "edit heading">編集</h1>
+            <ul class= "stock-edit list">
               <li>項目</li>
               <li>個数</li>
             </ul>
 
             <%= form_tag("/stock/update")do %>
-              <form>
-                <% @stocks.each do |stock| %>
-                  <ul class= "edit item">  
+              <% @stocks.each do |stock| %>
+                <% if stock.user_id == @current_user.id %>
+                  <div class="form-error list">
+                    <% stock.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                    <% end %>
+                  </div>
+                  <ul class= "stock-edit list">  
                     <li><input type="text" name="name[]" value= "<%= stock.content %>"></li>
                     <li><input type="number" name="number[]" value="<%= stock.stock_number%>"></li>
                   </ul> 
                 <% end %>
-                <input class= "btn submit" type= "submit" value= "保存"> 
-              </form>
+              <% end %>
+              <input class= "btn submit" type= "submit" value= "保存"> 
             <%end%>
-          </div>
           </div><!--container-->
         </div> <!--main -->
     </div><!--singleinbox -->

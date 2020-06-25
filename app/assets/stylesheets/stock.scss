@@ -4,7 +4,7 @@
 
 
 a{
-  display:inline-block;
+  display: inline-block;
   color:red;
 }
 
@@ -14,31 +14,37 @@ a{
   padding-right: 150px;
 }
 
-.menu{
+.list{
   display: flex;
   flex-wrap: wrap;
+  #justify-content: space-between;
 }
 
-.item{
-  display: flex;
-  flex-wrap: wrap;
+.list li{
+  width: 25% 
 }
 
-.menu li{
-  width: 25%;
-}
 
-.item li{
-  width: 25%;
-}
 
-input,textarea{
-  width: 200px;
+input{
+  width: 400px;
   font-size:15px;
-  margin:20px 50px 20px 0;
-  padding:20px 10px;
+  padding:20px 12px;
   border:1px solid #e6e6e6;
   background-color: #fff;
+
+}
+
+.form-error{
+  color: #ff4d75;
+}
+
+.form{
+  margin: 0 auto;
+  width:400px;
+}
+
+.form-body{
 }
 
 .submit {
@@ -53,6 +59,14 @@ input,textarea{
   box-shadow: 0 2px 6px #c1ced7;
   width:900px;
   margin: 0 auto;
+}
+
+.stocks-index-link{
+  margin: 0 auto;
+  width: 900px;
+  overflow: hidden;
+  padding: 20px 30px;
+  font-size: 18px;
 }
 
 

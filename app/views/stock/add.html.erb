@@ -3,31 +3,30 @@
 
 <body>
     <div class="singleinbox">
-        <div class="new-top-wrapper">
+        <div class="stock-add">
           <div class="container">
-            <h1>入荷＆使用</h1>
-
-        </div><!--top-wrapper-->
-
-        <div class="main add">
-          <div class="container">
-            <ul class= "add menu">
+            <h1 class= "add heading">入荷＆使用</h1>
+            <ul class= "stock-add list">
               <li>項目</li>
               <li>個数</li>
             </ul>
 
             <%= form_tag("/stock/1/update")do %>
-              <form>
-                <% @stocks.each do |stock| %>
-                  <ul class= "add item">  
-                    <li><input type="text" name="name[]" value= "<%= stock.content %>"></li>
+              <% @stocks.each do |stock| %>
+                <% if stock.user_id == @current_user.id %>
+                  <div class="form-error list">
+                    <% stock.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                    <% end %>
+                  </div>
+                  <ul class= "stock-add list">  
+                    <li><%= stock.content %></li>
                     <li><input type="number" name="number[]" value="0"></li>
                   </ul> 
                 <% end %>
-                <input class= "btn submit" type= "submit" value= "変更"> 
-              </form>
+              <% end %>
+              <input class= "btn submit" type= "submit" value= "変更"> 
             <%end%>
-          </div>
           </div><!--container-->
         </div> <!--main -->
     </div><!--singleinbox -->

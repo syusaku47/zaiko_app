@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    models:
+      stock: ユーザー
+    attributes:
+      stock:
+        content: 商品
+        stock_number: 個数

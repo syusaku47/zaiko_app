@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  food: MyString
+  price: 1
+  exp: 2020-06-19
+
+two:
+  food: MyString
+  price: 1
+  exp: 2020-06-19

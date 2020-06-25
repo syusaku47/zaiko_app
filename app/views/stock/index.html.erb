@@ -1,32 +1,27 @@
 <html>
 <body>
   <div class="singleinbox">
-    <div class="top-wrapper">
+    <div class="stock-index">
       <div class="container">
-        <h1>在庫一覧</h1>
-      </div>
-    </div><!--top-wrapper-->
-
-    <div class="main stocks-index">
-      <div class="container">
-        <div class= "index-menu">
+        <h1 class= "index heading">在庫一覧</h1>
+        <div class="stocks-index-link">
+        <ul class= "stock-index list">
           <li><%=link_to("編集","/stock/edit")%></li>
           <li><%=link_to("入荷＆使用","/stock/add")%></li>
+          <li><%=link_to("新規作成","/stock/new")%></li>
+        </ul>
         </div>
         <% @stocks.each do |stock| %>
-          <div class="stocks-index-item">
-            <ul class="index item">
-              <li><%= stock.content %></li>
-              <li>残り：<%= stock.stock_number%></li>
-              <li><%=link_to("削除","/stock/#{stock.id}/destroy",{method: "post"})%></li>
-            </ul>
-          </div>
-        <% end %>
-        
-          
-          
-        
-        
+          <% if stock.user_id == @current_user.id %>
+            <div class="stocks-index-item">
+              <ul class="stock-index list">
+                <li><%= stock.content %></li>
+                <li>残り：<%= stock.stock_number%></li>
+                <li><%=link_to("削除","/stock/#{stock.id}/destroy",{method: "post"})%></li>
+              </ul>
+            </div>   
+          <% end %>
+        <% end %> 
       </div>
     </div>
   </div><!--singleinbox -->
