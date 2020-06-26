@@ -76,7 +76,7 @@ h1{
 
 }
 
-#header-------------------------
+/*---------header--------------*/
 
 header {
   height: 75px;
@@ -140,7 +140,7 @@ header img{
   padding:25px 0;
 }
 
-#howto-------------------------
+/*--------howto-----------------*/
 
 .howtos h3{
   padding:15px 10px;
@@ -237,7 +237,7 @@ input{
 }
 
 
-#SNSリンク
+/*---------SNSリンク----------*/
 
 .fab{
   margin:5px;
@@ -255,7 +255,7 @@ input{
   background-color: #55acee;
 }
 
-#footer----------------------
+/*-----------footer-----------------*/
 
 footer{
   background-color: #222222;
@@ -285,7 +285,7 @@ footer{
 }
 
 
-#レスポンシブ------------------
+/*-----------レスポンシブ-------------*/
 
 @media (max-width: 670px) {
   .singleinbox .container{
