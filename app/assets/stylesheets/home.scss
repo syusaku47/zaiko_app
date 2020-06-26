@@ -70,7 +70,8 @@ h1{
 }
 
 .container{
-  width:1170px;
+  max-width:1170px;
+  width: 100%;
   padding:0 15px;
   margin:0 auto;
 
@@ -136,10 +137,6 @@ header img{
 
 .photo{
   padding:25px 0;
-}
-
-.body{
-  width:90%;
 }
 
 .howtos h3{

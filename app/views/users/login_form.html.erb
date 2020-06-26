@@ -6,8 +6,8 @@
                 <div class= "form-body">
                     <%= form_tag("/login")do %>
                         <% if @error_message%>
-                            <div class="form-error list">
-                                <li><%= @error_message %></li>
+                            <div class="form-error">
+                                <p><%= @error_message %></p>
                             </div>
                         <%end%>
                         <li><p>メールアドレス</p></li>
