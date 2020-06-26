@@ -18,7 +18,7 @@
         <div class="container">
           <div class="header-left">         
             <% if @current_user %>
-              <a class="link" href="/stock/index">在庫君TOP</a>
+              <a class="link" href="/stock/index">お家在庫君TOP</a>
             <% else %>
               <a class="link" href="/">TOP</a>
             <% end %>
@@ -32,9 +32,10 @@
               <a class="link" href="/stock/index">在庫一覧</a>
               <a class="link" href="/stock/new">新規作成</a>
             <%else%>
+            <a class="link" href="/home/contact">contact</a>
+            <a class="link" href="/home/about">about</a>
+            <a class="link" href="/home/howto">使用方法</a>
             <a class="link" href="/users/new">アカウント作成</a>
-            <a class="link" href="profile">about</a>
-            <a class="link" href="contact">contact</a>
           <%end%>
           </div>
         </div>
