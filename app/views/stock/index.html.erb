@@ -3,13 +3,13 @@
   <div class="singleinbox">
     <div class="stock-index">
       <div class="container">
-        <h1 class= "index heading">在庫一覧</h1>
         <div class="stocks-index-link">
-        <ul class= "stock-index list">
-          <li><%=link_to("編集","/stock/edit")%></li>
-          <li><%=link_to("入荷＆使用","/stock/add")%></li>
-          <li><%=link_to("新規作成","/stock/new")%></li>
-        </ul>
+          <h1 class= "index heading">在庫一覧</h1>
+          <ul class= "stock-index list">
+            <li><%=link_to("編集","/stock/edit")%></li>
+            <li><%=link_to("入荷＆使用","/stock/add")%></li>
+            <li><%=link_to("新規作成","/stock/new")%></li>
+          </ul>
         </div>
         <% @stocks.each do |stock| %>
           <% if stock.user_id == @current_user.id %>

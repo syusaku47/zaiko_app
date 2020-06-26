@@ -37,9 +37,10 @@ class UsersController < ApplicationController
       email: params[:email],
       password: params[:password]
     )
-    session[:user_id]=@user.id
+    
       
       if @user
+        session[:user_id]=@user.id
         flash[:notice]="ログインしました"
         redirect_to("/stock/index")
       else

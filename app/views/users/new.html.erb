@@ -5,24 +5,24 @@
     <div class="singleinbox">
         <div class="container">
         <h1 class= "new-heading">新規作成</h1>
-            <div class="form user-new">
+            <div class="form">
                 <div class= "form-body">
                     <%= form_tag("/users/create")do %>
-                        <div class= "form-error list">
+                        <div class= "form-error">
                             <% @user.errors.full_messages.each do |message| %>
                             <li><%= message %></li>
                             <%end%>
                         </div>
                         <p>名前</p> 
-                        <input type="text" name="name" value="<%= @user.name%>">
+                        <input class="login-input" type="text" name="name" value="<%= @user.name%>">
                         <p>メールアドレス</p>
-                        <input type="text" name="email" value="<%= @user.email%>">
+                        <input class="login-input" type="text" name="email" value="<%= @user.email%>">
                         <p>パスワード</p>
-                        <input type="text" name="password" value="<%= @user.password%>">
-                        <p><input class= "btn submit" type= "submit" value= "登録"></p>
+                        <input class="login-input" type="text" name="password" value="<%= @user.password%>">
+                        <p><input class= "btn submit login-input" type= "submit" value= "登録"></p>
                     <%end%>
                 </div> <!--form-body-->
-            </div> <!--user-new -->
+            </div> <!--form -->
         </div> <!--container-->
     </div> <!--singleinbox -->
 </body>

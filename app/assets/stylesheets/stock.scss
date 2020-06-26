@@ -24,32 +24,10 @@ a{
   width: 25% 
 }
 
-
-
-input{
-  width: 400px;
-  font-size:15px;
-  padding:20px 12px;
-  border:1px solid #e6e6e6;
-  background-color: #fff;
-
-}
-
 .form-error{
   color: #ff4d75;
 }
 
-.form{
-  margin: 0 auto;
-  width:400px;
-}
-
-.form-body{
-}
-
-.submit {
-  background-color: #239b76;
-}
 
 
 .stocks-index-item {
@@ -70,3 +48,23 @@ input{
 }
 
 
+@media (max-width: 670px) {
+  .stocks-index-item {
+    width: 100%;
+  }
+  .stocks-index-link{
+    width: 100%;
+  }
+  
+  .heading{
+    font-size:24px;
+  }
+  
+    li{
+    font-size:14px;
+  }
+
+    p{
+    font-size:14px;
+  }
+}

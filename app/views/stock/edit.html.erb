@@ -20,12 +20,12 @@
                     <% end %>
                   </div>
                   <ul class= "stock-edit list">  
-                    <li><input type="text" name="name[]" value= "<%= stock.content %>"></li>
-                    <li><input type="number" name="number[]" value="<%= stock.stock_number%>"></li>
+                    <li><input class= "form-input" type="text" name="name[]" value= "<%= stock.content %>"></li>
+                    <li><input class= "form-input" type="number" name="number[]" value="<%= stock.stock_number%>"></li>
                   </ul> 
                 <% end %>
               <% end %>
-              <input class= "btn submit" type= "submit" value= "保存"> 
+              <input class= "btn submit submit-input" type= "submit" value= "保存"> 
             <%end%>
           </div><!--container-->
         </div> <!--main -->

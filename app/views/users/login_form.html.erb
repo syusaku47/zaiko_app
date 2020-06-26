@@ -1,24 +1,23 @@
 <body>
     <div class="singleinbox">
-    <h1 class= "login-heading">ログイン</h1>
-        <div class="user-login">
         <div class="container">
-
-            <div class= "form-body">
-            <%= form_tag("/login")do %>
-                <% if @error_message%>
-                    <div class="form-error list">
-                        <li><%= @error_message %></li>
-                    </div>
-                <%end%>
-                <li><p>メールアドレス</p></li>
-                <li><input  name="email" value="<%= @email%>"></li>
-                <li><p>パスワード</p> </li>
-                <li><input type="password" name="password" value="<%= @password%>"></li>
-                <li><input class= "btn submit" type= "submit" value= "ログイン"> </li>
-            <%end%>
-        </div><!--form-body-->
+        <h1 class= "login-heading">ログイン</h1>
+            <div class="form">
+                <div class= "form-body">
+                    <%= form_tag("/login")do %>
+                        <% if @error_message%>
+                            <div class="form-error list">
+                                <li><%= @error_message %></li>
+                            </div>
+                        <%end%>
+                        <li><p>メールアドレス</p></li>
+                        <li><input class="login-input" name="email" value="<%= @email%>"></li>
+                        <li><p>パスワード</p> </li>
+                        <li><input class="login-input" type="password" name="password" value="<%= @password%>"></li>
+                        <li><input class= "btn submit login-input" type= "submit" value= "ログイン"> </li>
+                    <%end%>
+                </div><!--form-body-->
+            </div> <!--form -->
         </div><!--container-->
-        </div> <!--user-new -->
     </div><!--singleinbox -->
 </body>
