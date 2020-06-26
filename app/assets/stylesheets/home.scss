@@ -19,7 +19,6 @@ body {
 
 li {
   list-style: none;
-  
 }
 
 a {
@@ -77,6 +76,8 @@ h1{
 
 }
 
+#header-------------------------
+
 header {
   height: 75px;
   width: 100%;
@@ -114,7 +115,7 @@ header img{
   color: white;
   float: right;
   font-size: 25px;
-  padding: 45px 0;
+  padding: 21px 0;
   display: none;
 }
 
@@ -138,6 +139,8 @@ header img{
 .photo{
   padding:25px 0;
 }
+
+#howto-------------------------
 
 .howtos h3{
   padding:15px 10px;
@@ -233,6 +236,9 @@ input{
   text-align: center;
 }
 
+
+#SNSリンク
+
 .fab{
   margin:5px;
 }
@@ -248,6 +254,8 @@ input{
 .twitter {
   background-color: #55acee;
 }
+
+#footer----------------------
 
 footer{
   background-color: #222222;
@@ -277,15 +285,24 @@ footer{
 }
 
 
+#レスポンシブ------------------
+
 @media (max-width: 670px) {
   .singleinbox .container{
     width: 100%;
   }
 
   footer {
-    height: auto;
     text-align: center;
   }
+
+.btn-wrapper{
+  display:none;
+}
+
+.header-right{
+  display: none;
+}
 
   .btn {
     width: 100%;
