@@ -113,11 +113,41 @@ header img{
   float: right;
   font-size: 25px;
   padding: 21px 0;
-  display: none;
+  display:none;
 }
 
 .header-right a:hover{
   color: rgba(255, 255, 255, 0.5);
+}
+
+/*------------モーダル------------*/
+
+.menu-modal-wrapper{
+  width:20%;
+  position: fixed;
+  top:80px;
+  right:-20%;
+
+}
+
+#menu-modal .menu-list {
+  overflow: auto;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+.menu-list li{
+  text-align: right;
+  background-color: white;
+  padding:20px 28px;
+}
+
+.menu-list h2{
+  text-align: right;
+  padding:20px 20px;
+}
+
+.menu-list a{
+  color:#000;
 }
 
 .flash {
@@ -145,6 +175,7 @@ header img{
   text-align: center;
 }
 .my-photo{
+  display:none;
   margin-bottom: 36px;
 }
 
@@ -210,6 +241,7 @@ input{
 
 .form-input{
   width: 80%;
+  background: rgba(0, 0, 0, 0.08);
 }
 
 .btn{
@@ -307,6 +339,10 @@ footer{
 }
 
 
+.header-right{
+}
+
+
 /*-----------レスポンシブ-------------*/
 
 @media (max-width: 670px) {
@@ -340,6 +376,7 @@ footer{
   .menu-icon{
     display:block;
   }
+
   
   h2{
     font-size:20px;

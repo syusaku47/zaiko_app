@@ -23,7 +23,9 @@
               <a class="link" href="/">TOP</a>
             <% end %>
           </div>
-          <span class="fa fa-bars menu-icon"></span>
+          <span class="fa fa-bars menu-icon" id="hoge"></span>
+
+
           <div class="header-right">
             <%if @current_user%>
               <a class="link" href="/users/index"><%@current_user.name%></a>
@@ -32,14 +34,36 @@
               <a class="link" href="/stock/index">在庫一覧</a>
               <a class="link" href="/stock/new">新規作成</a>
             <%else%>
-            <a class="link" href="/home/contact">contact</a>
             <a class="link" href="/home/about">about</a>
             <a class="link" href="/home/howto">使用方法</a>
             <a class="link" href="/users/new">アカウント作成</a>
+            <a class="link" href="login">ログイン</a>
           <%end%>
           </div>
         </div>
       </header>
+      <div class="menu">
+        <div class="menu-modal-wrapper off" id="menu-modal">
+            <div class="menu-list">
+              <h2>MENU</h2>
+              <ul>
+              <%if @current_user%>
+              <li><a class="link" href="/users/index"><%@current_user.name%></a></li>
+              <%= link_to("/logout",{method: :post}) do%>
+              <li><a class="link" >ログアウト</a></li>
+              <%end%>
+              <li><a class="link" href="/home/howto">使用方法</a></li>
+              <li><a class="link" href="/stock/index">在庫一覧</a></li>
+              <li><a class="link" href="/stock/new">新規作成</a></li>
+            <%else%>
+            <li><a class="link" href="/home/about">about</a></li>
+            <li><a class="link" href="/home/howto">使用方法</a></li>
+            <li><a class="link" href="/users/new">アカウント作成</a></li>
+          <%end%>
+              </ul>
+            </div>
+        </div>
+      </div>
       
       <% if flash[:notice] %>
         <div class= "flash">
