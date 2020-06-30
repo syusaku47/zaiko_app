@@ -59,9 +59,12 @@ h1{
 
 .section-title{
   border-bottom:2px solid #00000042;
-  font-size:27px;
-  margin:40px 0;
+  margin:40px 0 32px 0;
   font-weight: normal;
+}
+
+.section-title h2{
+  font-size:27px;
 }
 
 .catch h3 {
@@ -70,7 +73,7 @@ h1{
 
 .container{
   max-width:1170px;
-  width: 100%;
+  width:100%;
   padding:0 15px;
   margin:0 auto;
 
@@ -123,15 +126,15 @@ header img{
 /*------------モーダル------------*/
 
 .menu-modal-wrapper{
-  width:20%;
+  width:40%;
   position: fixed;
-  top:80px;
-  right:-20%;
-
+  top:0;
+  right:-40%;
+  z-index:99;
 }
 
 #menu-modal .menu-list {
-  overflow: auto;
+  overflow: scroll;
   overflow-x: hidden;
   background-color: #fff;
 }
@@ -323,9 +326,6 @@ footer{
   float:left;
 }
 
-.footer-list{
-  float:right;
-}
 
 .footer-list a{
   padding:20px 20px;
@@ -370,20 +370,22 @@ footer{
     font-size:14px;
   }
 
-    p{
-    font-size:14px;
-  }
+
   .menu-icon{
     display:block;
   }
 
   
   h2{
-    font-size:20px;
+    font-size:16px;
   }
   
   h3{
     font-size:14px;
+  }
+
+  p{
+    font-size:12px;
   }
 
   .submit-input{
@@ -394,8 +396,21 @@ footer{
   .login-input{
     width:100%;
   }
-  footer {
+
+
+  footer{
     text-align: center;
+    height:50px;
+  }
+
+  .footer-logo{
+    float:none;
+  }
+
+  .footer-logo p{
+    width:100%;
+    font-size:24px;
+    
   }
 }
   
