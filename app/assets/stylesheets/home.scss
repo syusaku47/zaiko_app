@@ -19,10 +19,11 @@ body {
 
 li {
   list-style: none;
+  margin:14px 0;
 }
 
 a {
-  text-decoration: underline; /*リンクにアンダーバー*/
+  text-decoration: none; /*リンクにアンダーバー*/
 }
 
 p {
@@ -141,12 +142,13 @@ header img{
 .menu-list li{
   text-align: right;
   background-color: white;
-  padding:20px 28px;
+  padding:0 28px;
 }
 
 .menu-list h2{
   text-align: right;
-  padding:20px 20px;
+  padding:0 20px;
+  margin-top:20px;
 }
 
 .menu-list a{
@@ -225,6 +227,7 @@ input{
 
 .submit {
   background-color: #239b76;
+  padding:20px;
 }
 
 .submit-input{
@@ -302,14 +305,17 @@ input{
 
 .instagram {
   background-color: #239b76;
+  padding:8px 4px;
 }
 
 .facebook {
   background-color: #3b5998;
+  padding:8px 4px;
 }
 
 .twitter {
   background-color: #55acee;
+  padding:8px 4px;
 }
 
 /*-----------footer-----------------*/
@@ -389,7 +395,6 @@ footer{
   }
 
   .submit-input{
-    color:#889eab;
     width:15%;
   }
 

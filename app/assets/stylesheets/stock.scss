@@ -16,8 +16,7 @@ a{
 
 .list{
   display: flex;
-  flex-wrap: wrap;
-  #justify-content: space-between;
+  flex-wrap: wrap; 
 }
 
 .list li{
@@ -31,7 +30,7 @@ a{
 
 
 .stocks-index-item {
-  padding: 20px 30px;
+  padding: 0 30px;
   background-color: white;
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
@@ -56,15 +55,4 @@ a{
     width: 100%;
   }
   
-  .heading{
-    font-size:24px;
-  }
-  
-    li{
-    font-size:14px;
-  }
-
-    p{
-    font-size:14px;
-  }
 }
