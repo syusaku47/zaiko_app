@@ -146,7 +146,8 @@ class StocksController < ApplicationController
 
   #ユーザーの確認
   def ensure_correct_user 
-    if params[:id] != @current_user.id
+    stock = Stock.find_by(id: params[:id])
+    if stock.user_id != @current_user.id
       flash[:notice] = "権限がありません"
       redirect_to("/stocks/index")
     end
