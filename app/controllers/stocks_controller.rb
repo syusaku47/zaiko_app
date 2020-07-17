@@ -151,5 +151,5 @@ class StocksController < ApplicationController
       redirect_to("/stocks/index")
     end
   end
-
+#static_pages
 end
