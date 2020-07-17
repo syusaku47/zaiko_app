@@ -4,12 +4,14 @@
     <div class="container">
         <div class="user-info">
             <h1 class= "info-heading">アカウント</h1>
-
+            <br>
+            <br>
             <div class="user-info-item"><!--width:700px-->
                 <h3>ユーザー名</h3>
                 <p><%= @user.name %></p>
                 <h3>メールアドレス</h3>
                 <p><%= @user.email%></p>
+                <br>
                 <ul>
                     <li><%=link_to("編集","/users/#{@user.id}/edit",{class: "btn submit info-input"})%></li>
                 </ul>

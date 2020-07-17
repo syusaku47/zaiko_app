@@ -33,31 +33,6 @@ aside{
   }
 }
 
-
-
-.decrease{
-  border: 2px solid rgba(0,0,0,0.4);
-  border-radius: 12px;
-  color:black;
-  width:30px;
-  text-align: center;
-}
-
-.increase{
-  border: 2px solid rgba(0,0,0,0.4);
-  border-radius: 12px;
-  color:black;
-  width:30px;
-  text-align: center;
-}
-
-
-.index-menu{
-  float:left;
-  height: 180px;
-}
-
-
 li {
   list-style: none;
   margin:14px 0;
@@ -92,10 +67,10 @@ box-shadow: 0 2px 6px #c1ced7; 枠組み
 .btn{
   font-size:15px;
   color:white;
-  padding:10px;
+  padding:8px;
   margin: 12px 4px  0;
-  border-radius: 4px;
-  opacity: 0.8;
+  border-radius: 2px;
+  opacity: 0.7;
   cursor: pointer;
 }
 
@@ -243,7 +218,7 @@ header img{
   margin-bottom: 36px;
 }
 
-.row{
+.about-top-row{
   height:800px;
   dt{
     float: left;
@@ -306,11 +281,11 @@ input{
 }
 
 .submit-input{
-  color:#889eab;
+  color:white;
   width:15%;
 }
 .info-input{
-  color:#889eab;
+  color:white;
   width:100%;
 }
 
@@ -433,14 +408,15 @@ footer{
 
   .btn {
     width: 100%;
+    padding:8px 0;
   }
   
   .heading{
-    font-size: 24px;
+    font-size: 32px;
   }
   
-    li{
-    font-size:14px;
+  li{
+    font-size:12px;
   }
 
 
@@ -462,7 +438,8 @@ footer{
   }
 
   .submit-input{
-    width:15%;
+    width:30%;
+    padding:12px 0;
   }
 
   .login-input{

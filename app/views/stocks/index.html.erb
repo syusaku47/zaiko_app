@@ -22,7 +22,9 @@
                 </dl>
                 </aside>
                 <div class="clear"></div>
-            <ul class= "stock-index list">
+          </div>
+          <div class="stocks-index-item">
+            <ul class= "list">
               <li>商品名</li>
               <li>残数(個)</li>
               <li>単価(円)</li>
@@ -30,40 +32,40 @@
               <li>在庫追加</li>
             </ul>
           </div>
-        <% @stocks.each do |stock| %>
-          <% if stock.user_id == @current_user.id %>
-          <% food = stock.food%>
-            <div class="stocks-index-item">
-              <ul class="stock-index list">
-                <li><%= link_to(stock.content,"/stocks/#{stock.id}") %></li>
-                <li><%= link_to(stock.stock_number,"/stocks/#{stock.id}")%></li>
-                
-                <!--単価、賞味期限の入力があるか-->
-                <% if food.price && food.exp %>
-                  <li><%= link_to(food.price,"/stocks/#{stock.id}") %></li>
-                  <li><%= link_to(food.exp,"/stocks/#{stock.id}")%></li>
-                <% elsif food.price %>
-                  <li><%= link_to(food.price,"/stocks/#{stock.id}") %></li>
-                  <li></li>
-                <% elsif food.exp %>
-                  <li></li>
-                  <li><%= link_to(food.exp,"/stocks/#{stock.id}")%></li>
-                <% else %>
-                  <li></li>
-                  <li></li>  
-                <% end %>
+            <% @stocks.each do |stock| %>
+              <% if stock.user_id == @current_user.id %>
+              <% food = stock.food%>
+          <div class="stocks-index-line">
+                <ul class="stock-index list">
+                  <li><%= link_to(stock.content,"/stocks/#{stock.id}") %></li>
+                  <li><%= link_to(stock.stock_number,"/stocks/#{stock.id}")%></li>
+                  
+                  <!--単価、賞味期限の入力があるか-->
+                  <% if food.price && food.exp %>
+                    <li><%= link_to(food.price,"/stocks/#{stock.id}") %></li>
+                    <li><%= link_to(food.exp,"/stocks/#{stock.id}")%></li>
+                  <% elsif food.price %>
+                    <li><%= link_to(food.price,"/stocks/#{stock.id}") %></li>
+                    <li></li>
+                  <% elsif food.exp %>
+                    <li></li>
+                    <li><%= link_to(food.exp,"/stocks/#{stock.id}")%></li>
+                  <% else %>
+                    <li></li>
+                    <li></li>  
+                  <% end %>
 
-                <!--在庫の増減-->
-                <li>
-                <%= link_to("-","/stocks/#{stock.id}/decrease",{method: :post, class: "decrease"})%>
-                <%= link_to("+","/stocks/#{stock.id}/increase",{method: :post, class: "increase" })%>
-                </li>
-              </ul>
-            </div>   
-          <% end %>
-        <% end %> 
-      </main>
-    </div><!--container-->
+                  <!--在庫の増減-->
+                  <li>
+                  <%= link_to("-","/stocks/#{stock.id}/decrease",{method: :post, class: "decrease"})%>
+                  <%= link_to("+","/stocks/#{stock.id}/increase",{method: :post, class: "increase" })%>
+                  </li>
+                </ul>
+              </div>   
+            <% end %>
+          <% end %> 
+        </main>
+      </div><!--container-->
     </div>
   </div><!--singleinbox -->
 </body>

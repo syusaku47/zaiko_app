@@ -79,7 +79,8 @@ class UsersController < ApplicationController
     end
 
     def ensure_correct_user 
-      if params[:id] != @current_user.id
+      user = User.find_by(id: params[:id])
+      if user.id != @current_user.id
         flash[:notice] = "権限がありません"
         redirect_to("/stocks/index")
       end
