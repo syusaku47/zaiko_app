@@ -3,34 +3,57 @@
         <div class="about-top-wrapper">
             <div class="container">
                 <h1 class="heading">about</h1>
-                <img class="my-photo" src="/syusaku.jpeg" alt="about-photo" width="70%" height="70%">
+                <img class="my-photo" src="/syusaku.jpeg" alt="about-photo" width="100%" height="60%">
             </div>
         </div>
         
-        <div class="main">
+        <main>
             <div class="container">
-                <ul>
-                    <li class="sentence">name:桝田周作</li>
-                    <li class="sentence">age:31</li>
-                    <li class="sentence">blood:B</li>
-                    <li class="sentence">graduation:函館工業高等専門学校</li>
-                </ul>
-                <br>
-                <h3>~History~</h3>
-                <ul>
-                    <li class="sentence">2013年    :オリンパスメディカルシステム退社</li>
-                    <li class="sentence">2013年~   :ミュージシャンをめざす</li>
-                    <li class="sentence">2019年    :ライブハウスでの活動をメインでしていたが東京の荒波に飲まれる</li>
-                    <li class="sentence">2019年    :WEBアプリに興味を持ち、昔勉強していたプログラミングを再度勉強する</li>
-                    <li class="sentence">現在      :Progateを活用してRuby on railsのポートフォリオ（お家在庫君）作成</li>
-                </ul>
-                <br>
+                <div class="about-top row">
+                        <ul>
+                            <li class="sentence">name:桝田周作</li>
+                            <li class="sentence">age:31</li>
+                            <li class="sentence">blood:B</li>
+                            <li class="sentence">graduation:函館工業高等専門学校</li>
+                        </ul>
+                        <br>
+                        <div class="history"></div>
+                        <h2>~History~</h2>
+                        <dl>
+                            <dt>2013年</dt>
+                                <dd>オリンパスメディカルシステム退社</dd>
+                            <dt>2013年</dt>
+                                <dd>ミュージシャンをめざす</dd>
+                            <dt>2019年</dt>
+                                <dd>ライブハウスでの活動をメインでしていたが東京の荒波に飲まれる</dd>
+                            <dt>2019年</dt>
+                                <dd>WEBアプリに興味を持ち、昔勉強していたプログラミングを再度勉強する</dd>
+                            <dt>現在</dt>
+                                <dd>Progateを活用してRuby on railsのポートフォリオ（お家在庫君）作成</dd>
+                        </dl>
+                        <br>
+                    <div class="contact-form">
+                        <h2>Contact form</h2>
+                        <ul>
+                            <dl>
+                                <li>
+                                    <dt>お名前</dt>
+                                    <dd><input class="form-input" type="text" placeholder="名前を入力してください"></dd>
+                                </li>
+                                <li>
+                                    <dt>お問合せ内容</dt>
+                                    <dd><textarea name="text" placeholder="お問い合わせ内容を入力してください"></textarea></dd>
+                                </li>
+                                <li>
+                                    <dt></dt>
+                                    <dd><input class="btn contact-input" type="submit" value="送信"></dd>
+                                </li>
+                            </dl>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="contact-form">
-            <div class="container">
-
-            </div>
-        </div>
+        </main>
+        <div class="clear"></div>
     </div>
 </body>

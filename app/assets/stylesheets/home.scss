@@ -89,6 +89,19 @@ box-shadow: 0 2px 6px #c1ced7; 枠組み
   float:right;
 }
 
+.btn{
+  font-size:15px;
+  color:white;
+  padding:10px;
+  margin: 12px 4px  0;
+  border-radius: 4px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.btn:hover{
+  opacity:1;
+}
 .singleinbox{
   background-color: #f7f7f7;
   min-height: 100vh;
@@ -224,14 +237,31 @@ header img{
 .about-top-wrapper{
   text-align: center;
 }
+
 .my-photo{
   display:none;
   margin-bottom: 36px;
 }
 
-.sentence{
-  padding-left: 12px;
+.row{
+  height:800px;
+  dt{
+    float: left;
+  }
+  dd{
+    margin-left:200px;
+  }
+  textarea{
+    width:80%;
+    line-height: 100px;
+  }
 }
+
+.history{
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  margin-bottom: 32px;
+}
+
 
 /*---------howto--------------*/
 .row{
@@ -284,6 +314,12 @@ input{
   width:100%;
 }
 
+.contact-input{
+  width: 80%;
+  background: rgba(0, 0, 0, 0.08);
+  color:black;
+}
+
 .form{
   text-align: center;
 }
@@ -296,22 +332,6 @@ input{
   width: 80%;
   background: rgba(0, 0, 0, 0.08);
 }
-
-.btn{
-  font-size:15px;
-  color:white;
-  padding:10px;
-  margin: 12px 4px  0;
-  border-radius: 4px;
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-.btn:hover{
-  opacity:1;
-}
-
-
 
 /*beans*/
 
