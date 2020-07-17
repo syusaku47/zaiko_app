@@ -1,0 +1,31 @@
+<html>
+<body>
+<div class="singleinbox">
+    <div class="container">
+        <div class="user-edit">
+            <h1 class= "edit-heading">アカウント</h1>
+            <div class="form-error list">
+                <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+                <% end %>
+            </div>
+
+            <%= form_tag("/users/#{@user.id}/update")do %>
+            <div class="user-edit-item">
+                <p>ユーザー名</p>
+                <p><input name="name" value="<%= @user.name %>"></p><br>
+                <p>メールアドレス</p>
+                <p><input name="email" value="<%= @user.email%>"></p><br>
+                <input class= "btn submit submit-input" type= "submit" value= "変更">
+            </div>
+            <% end %>
+            <div class="user-edit-link">
+                <ul class= "user-edit list">
+                <li><%=link_to("戻る","/users/info")%><li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div><!--singleinbox -->
+</body>
+</html>

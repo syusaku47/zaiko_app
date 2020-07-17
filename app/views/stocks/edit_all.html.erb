@@ -9,11 +9,14 @@
             <ul class= "stock-edit list">
               <li>項目</li>
               <li>個数</li>
+              <li>単価</li>
+              <li>賞味期限</li>
             </ul>
 
-            <%= form_tag("/stock/update")do %>
+            <%= form_tag("/stocks/edit/update_all")do %>
               <% @stocks.each do |stock| %>
                 <% if stock.user_id == @current_user.id %>
+                <% food = Food.find_by(stock_id: stock.id)%>
                   <div class="form-error list">
                     <% stock.errors.full_messages.each do |message| %>
                       <li><%= message %></li>
@@ -22,6 +25,8 @@
                   <ul class= "stock-edit list">  
                     <li><input class= "form-input" type="text" name="name[]" value= "<%= stock.content %>"></li>
                     <li><input class= "form-input" type="number" name="number[]" value="<%= stock.stock_number%>"></li>
+                    <li><input class= "form-input" type="text" name="price[]" value="<%= food.price %>"></li>
+                    <li><input class= "form-input" type="date" name="exp[]" value="<%= food.exp%>"></li>
                   </ul> 
                 <% end %>
               <% end %>

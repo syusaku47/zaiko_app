@@ -1,7 +1,7 @@
 <body>
     <div class="singleinbox">
         <div class="container">
-        <h1 class= "login-heading">ログイン</h1>
+            <h1 class= "login-heading">ログイン</h1>
             <div class="form">
                 <div class= "form-body">
                     <%= form_tag("/login")do %>
@@ -10,11 +10,22 @@
                                 <p><%= @error_message %></p>
                             </div>
                         <%end%>
-                        <li><p>メールアドレス</p></li>
-                        <li><input class="login-input" name="email" value="<%= @email%>"></li>
-                        <li><p>パスワード</p> </li>
-                        <li><input class="login-input" type="password" name="password" value="<%= @password%>"></li>
-                        <li><input class= "btn submit login-input" type= "submit" value= "ログイン"> </li>
+                        <div class="saiyo">
+                            <dl>
+                                <dt>採用担当者様用ログインアカウント</dt>
+                                <dd>アドレス：saiyo@gmail.com</dd>
+                                <dd>パスワード：saiyo</dd>
+                            </dl>
+                        </div>
+                        <div class="login-form">
+                        <ul>
+                            <li>メールアドレス</li>
+                            <li><input class="login-input" name="email" value="<%= @email%>"></li>
+                            <li>パスワード</li>
+                            <li><input class="login-input" type="password" name="password" value="<%= @password%>"></li>
+                            <li><input class= "btn submit login-input" type= "submit" value= "ログイン"> </li>
+                        </ul>
+                        </div>
                     <%end%>
                 </div><!--form-body-->
             </div> <!--form -->

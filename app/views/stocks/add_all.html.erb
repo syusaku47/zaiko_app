@@ -11,7 +11,7 @@
 				<li>個数</li>
 				</ul>
 					<div class="form-body">
-						<%= form_tag("/stock/1/update")do %>
+						<%= form_tag("/stocks/add/update_all")do %>
 							<% @stocks.each do |stock| %>
 								<% if stock.user_id == @current_user.id %>
 									<div class="form-error list">
@@ -31,4 +31,4 @@
 			</div><!--container-->
         </div> <!--main -->
     </div><!--singleinbox -->
-  </body>
+</body>

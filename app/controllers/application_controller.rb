@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     before_action :set_current_user
-    before_action :current_user_stock
+
     
     def set_current_user
         @current_user= User.find_by(id: session[:user_id])
@@ -13,8 +13,11 @@ class ApplicationController < ActionController::Base
         end
     end
 
-    def current_user_stock
-        @stocks= Stock.all.order(created_at: :desc)        
+    def forbid_login_user
+        if @current_user
+            flash[:notice] = "ログイン済です"
+            redirect_to("/stocks/index")
+        end
     end
 
 end

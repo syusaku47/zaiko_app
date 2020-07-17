@@ -9,11 +9,52 @@ form, input, div {
   padding: 0;
 }
 
+
+
 body {
   font-family: dnp-shuei-gothic-gin-std, -apple-system, BlinkMacSystemFont, "Helvetica Neue", HelveticaNeue, "Segoe UI", "Yu Gothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   /*font-family: 'ヒラギノ丸ゴ ProN W4','Hiragino Maru 
   Gothic ProN';ゴシック体のフォント*/
   /*serif,"Avenir NEXT"*/
+}
+
+aside{
+  float: right;
+  display:none;
+  dd{
+    font-size: 14px;
+    margin-bottom:18px;
+  }
+
+  dt{
+    border-bottom: 1px solid black;
+    display:inline-block;
+    margin-bottom:8px;
+  }
+}
+
+
+
+.decrease{
+  border: 2px solid rgba(0,0,0,0.4);
+  border-radius: 12px;
+  color:black;
+  width:30px;
+  text-align: center;
+}
+
+.increase{
+  border: 2px solid rgba(0,0,0,0.4);
+  border-radius: 12px;
+  color:black;
+  width:30px;
+  text-align: center;
+}
+
+
+.index-menu{
+  float:left;
+  height: 180px;
 }
 
 
@@ -44,10 +85,14 @@ box-shadow: 0 2px 6px #c1ced7; 枠組み
   clear:left;
 }
 
+.float-right{
+  float:right;
+}
+
 .singleinbox{
   background-color: #f7f7f7;
   min-height: 100vh;
-  padding:60px 0;
+  padding:30px 0 60px 0;
 }
 
 h1{
@@ -220,7 +265,7 @@ header img{
 
 input{
   font-size:15px;
-  padding:20px 12px;
+  padding:14px 12px;
   border:1px solid #e6e6e6;
   background-color: #fff;
 }
@@ -234,13 +279,15 @@ input{
   color:#889eab;
   width:15%;
 }
+.info-input{
+  color:#889eab;
+  width:100%;
+}
 
 .form{
   text-align: center;
 }
-.form-body li{
-  line-height: 60px;
-}
+
 .login-input{
   width: 40%;
 }

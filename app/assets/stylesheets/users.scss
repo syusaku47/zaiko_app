@@ -2,4 +2,46 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.user-info{
+    #background-color:green;
+}
 
+.user-info-item{
+    margin: 0 auto;
+    text-align: center;
+    width:240px;
+
+    h3{
+    margin-bottom:4px;
+    color:rgba(0,0,0,0.6);
+    display:inline-block;
+    }
+
+    p{
+    font-size: 24px;
+    margin-bottom:32px;
+    border-bottom: 1px solid rgba(0,0,0,0.6);
+    }
+
+}
+
+.user-info-link{
+    a{
+    font-size:18px; 
+    color: blue;
+    }
+}
+
+.user-edit-item{
+    text-align: center;
+    p{
+        font-size:36px;
+    }
+
+}
+
+.user-edit-link{
+    li{
+        font-size:24px;  
+    }
+}

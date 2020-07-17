@@ -1,0 +1,25 @@
+<html>
+<body>
+<div class="singleinbox">
+    <div class="container">
+        <div class="user-info">
+            <h1 class= "info-heading">アカウント</h1>
+
+            <div class="user-info-item"><!--width:700px-->
+                <h3>ユーザー名</h3>
+                <p><%= @user.name %></p>
+                <h3>メールアドレス</h3>
+                <p><%= @user.email%></p>
+                <ul>
+                    <li><%=link_to("編集","/users/#{@user.id}/edit",{class: "btn submit info-input"})%></li>
+                </ul>
+            </div>
+            <div class="user-info-link">
+            <%=link_to("アカウント削除する場合はこちら","/users/#{@user.id}/destroy",{method: "post", class: "float-right"})%>
+            <%=link_to("戻る","/stocks/index")%>
+            </div>
+        </div>
+    </div>
+</div><!--singleinbox -->
+</body>
+</html>

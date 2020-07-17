@@ -15,6 +15,11 @@ module ZaikoApp
 
     # i18n
     config.i18n.default_locale = :ja
+
+    config.generators do |g|
+      g.assets false          # CSS, JavaScriptファイルは生成しない
+      g.test_framework false  # testファイルは生成しない
+    end
     
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
