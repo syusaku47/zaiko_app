@@ -1,5 +1,5 @@
 class StocksController < ApplicationController
-  before_action :ensure_correct_user{only: [:destroy, :update, :decrease, :increase, :edit]}
+  before_action :ensure_correct_user,{only: [:destroy, :update, :decrease, :increase, :edit]}
 
   def index
     @stocks = Stock.all.order(created_at: :desc)

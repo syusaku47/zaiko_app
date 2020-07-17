@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user,{only:[:edit, :update]}
   before_action :forbid_login_user,{only:[:login, :login_form]}
-  before_action :ensure_correct_user{only: [:info, :update, :edit, :destroy]}
+  before_action :ensure_correct_user,{only: [:info, :update, :edit, :destroy]}
   
   def info
     @user = User.find_by(id: session[:user_id]) 
