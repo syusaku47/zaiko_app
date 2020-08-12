@@ -6,4 +6,7 @@ class HomeController < ApplicationController
 
   def howto
   end
+
+  def test
+  end
 end
