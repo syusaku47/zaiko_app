@@ -1,5 +1,5 @@
 class StocksController < ApplicationController
-  before_action :ensure_correct_user{only: [:destroy, :update, :decrease, :increase, :edit]}
+  before_action :ensure_correct_user,{only: [:destroy, :update, :decrease, :increase, :edit]}
 
   def index
     @stocks = Stock.all.order(created_at: :desc)
@@ -146,7 +146,8 @@ class StocksController < ApplicationController
 
   #ユーザーの確認
   def ensure_correct_user 
-    if params[:id] != @current_user.id
+    stock = Stock.find_by(id: params[:id])
+    if stock.user_id != @current_user.id
       flash[:notice] = "権限がありません"
       redirect_to("/stocks/index")
     end

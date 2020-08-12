@@ -15,7 +15,7 @@
             </div> 
               <%end%>
               -->
-            <ul class= "stock-new list">
+            <ul class= "stock-new-list">
               <li>新規購入</li>
               <li>個数</li>
               <li>単価</li>
@@ -31,7 +31,7 @@
               <%end%>           
               </div>
               <% 2.times do%>
-              <ul class= "stock-new list">  
+              <ul class= "stock-new-list">  
                 <li><input class= "form-input" placeholder="トマト" type="text" name="item[]" value="<%= @stock.content%>"></li>
                 <li><input class= "form-input" placeholder="5" type="number" name="number[]" value="<%= @stock.stock_number%>"></li>
                 <li><input class= "form-input" placeholder="500" type="text" name="price[]" value="<%= @food.price%>"></li>
