@@ -44,6 +44,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'mysql2'
+  gem 'rspec-rails', '~> 4.0.0.beta2' 
 end
 
 group :development do
@@ -55,6 +56,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'ruby-debug-ide'
   gem 'debase' 
+  gem 'spring-commands-rspec'
 end
 
 group :test do
